@@ -49,8 +49,8 @@ export default function Home() {
                     })
                 }}/>
                 <button className={'p-3 text-white bg-blue-500 border-2 border-blue-500'} onClick={() => {
-                    if (form?.date) {
-                        setSelected2(form?.date)
+                    if (form2?.date) {
+                        setSelected2(form2?.date)
                     }
                 }}>submit
                 </button>
