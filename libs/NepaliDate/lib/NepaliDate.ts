@@ -1,21 +1,11 @@
 import NepaliCalendarHashMap from '../mapping/calendar.json'
 import moment from "moment";
-import {
-    ENG_DATE_STARTING,
-    NEPALI_DATE_INITIAL,
-} from "@/libs/NepaliDate/playground/src/constants/nepali.constant";
+import {ENG_DATE_STARTING, NEPALI_DATE_INITIAL,} from "@/libs/NepaliDate/playground/src/constants/nepali.constant";
 import {NepaliCalendarHashmapInterface, NepaliDateInterface} from "@/libs/NepaliDate/@types";
-import {FormatNepaliDate} from "@/libs/NepaliDate/lib/formatter/DateFormatter";
+import {FormatNepaliDate, nepaliDigitToEng} from "@/libs/NepaliDate/lib/formatter/DateFormatter";
 
 
 class NepaliDate {
-
-    /**
-     * CONSTRUCTOR CALL
-     */
-    constructor() {
-    }
-
     /**
      * CONVERT ENG TO NEPALI DATE
      * @param date
@@ -76,7 +66,11 @@ class NepaliDate {
         }
     }
 
-    nepToEngDate(date: string | NepaliDateInterface, format: string | undefined = undefined) {
+    nepToEngDate(date: string | NepaliDateInterface | {
+        year: number
+        month: number
+        date: number
+    }, format: string | undefined = undefined) {
         let year: number = 0, month: number = 0, day: number = 0;
 
         if (typeof date === 'string') {
@@ -87,9 +81,9 @@ class NepaliDate {
                     formatted: 'Invalid date'
                 }
             }
-            year = parseInt(parsedArray[0])
-            month = parseInt(parsedArray[1])
-            day = parseInt(parsedArray[2])
+            year = parseInt(nepaliDigitToEng(parsedArray[0]))
+            month = parseInt(nepaliDigitToEng(parsedArray[1]))
+            day = parseInt(nepaliDigitToEng(parsedArray[2]))
         } else {
             year = date?.year
             month = date?.month
