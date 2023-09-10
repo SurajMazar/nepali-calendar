@@ -1,3 +1,6 @@
+import NepaliCalendarHashmap from '../mapping/calendar.json'
+import {NepaliCalendarHashmapInterface} from "@/libs/NepaliDate/@types";
+
 /**
  * NEPALI CALENDAR YEARS WITH NUMBER OF DAYS
  */
@@ -194,6 +197,7 @@ export const NEPALI_DAYS = {
     },
 }
 
+export const NepaliCalendarMapping: Array<NepaliCalendarHashmapInterface> = NepaliCalendarHashmap
 
 export const NEPALI_DATE_INITIAL = 263
 
