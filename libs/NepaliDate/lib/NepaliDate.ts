@@ -119,7 +119,7 @@ class NepaliDate {
             const initialDate = moment(ENG_DATE_STARTING).startOf('day')
             const convertedEngDate = initialDate.add(daysToBeAdded, 'days')
             return {
-                date: convertedEngDate,
+                date: convertedEngDate.toDate(),
                 formatted: convertedEngDate.format(format || 'YYYY, MMMM DD, dddd')
             }
         }

@@ -166,7 +166,7 @@ export const NEPALI_MONTHS = {
     },
 }
 
-export const NEPALI_DAYS = {
+export const NEPALI_DAYS: Record<NEPALI_DAY_KEY, { en: string, np: string }> = {
     1: {
         en: 'Sunday',
         np: 'आइतवार'
@@ -197,7 +197,9 @@ export const NEPALI_DAYS = {
     },
 }
 
-export const NepaliCalendarMapping: Array<NepaliCalendarHashmapInterface> = NepaliCalendarHashmap
+
+export type NEPALI_DAY_KEY = "1" | "2" | "3" | "4" | "5" | "6" | "7"
+export const NepaliCalendarMapping: Array<NepaliCalendarHashmapInterface> = NepaliCalendarHashmap as Array<NepaliCalendarHashmapInterface>
 
 export const NEPALI_DATE_INITIAL = 263
 
