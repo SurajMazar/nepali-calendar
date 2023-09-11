@@ -1,0 +1,14 @@
+.np-calendar {
+  @apply w-full overflow-x-auto bg-white shadow-md table-fixed;
+  thead {
+    @apply shadow-md;
+  }
+
+  th {
+    @apply px-4 py-2 text-right font-normal border-r-[2px] border-collapse border-gray-200;
+  }
+
+  td {
+    @apply p-4 cursor-pointer border-[2px] border-t-0  border-collapse border-gray-200 h-[8rem];
+  }
+}

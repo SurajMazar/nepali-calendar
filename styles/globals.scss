@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "components/font";
+@import "../libs/NepaliCalendarReact/components/Calendar/CalendarUI/index";
+
+
+* {
+  font-family: 'Gilroy';
+}
