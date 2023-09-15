@@ -59,8 +59,8 @@ const DateConvertor: NextPage = () => {
             <div className={'min-w-[700px] overflow-auto bg-white p-4'}>
                 {
                     reverse ?
-                        <Form form={enForm} layout={'vertical'} onFinish={(values) => {
-                            const engDate = englishToNepaliDate(values.date, {
+                        <Form form={enForm} layout={'vertical'} onFinish={(values:{date:dayjs.Dayjs}) => {
+                            const engDate = englishToNepaliDate(values.date.toDate(), {
                                 devanagari: true,
                                 format: 'DD MMMM YYYY, dddd'
                             })
