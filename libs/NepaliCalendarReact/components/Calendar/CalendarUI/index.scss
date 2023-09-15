@@ -1,5 +1,5 @@
 .np-calendar {
-  @apply w-full overflow-x-auto bg-white shadow-md table-fixed;
+  @apply w-full overflow-x-auto bg-white shadow-md table-fixed w-[850px] overflow-x-auto;
   thead {
     @apply shadow-md;
   }

@@ -85,9 +85,9 @@ class NepaliDate {
             month = parseInt(nepaliDigitToEng(parsedArray[1]))
             day = parseInt(nepaliDigitToEng(parsedArray[2]))
         } else {
-            year = date?.year
-            month = date?.month
-            day = date?.date
+            year = parseInt(date?.year as any)
+            month = parseInt(date?.month as any)
+            day = parseInt(date?.date as any)
         }
 
         /**
