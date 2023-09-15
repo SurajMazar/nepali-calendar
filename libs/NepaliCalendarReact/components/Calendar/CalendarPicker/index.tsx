@@ -16,7 +16,7 @@ const CalendarPicker: React.FC = () => {
             }} value={selectedYear || ''} placeholder={'Select year'} className={'px-4 py-2'}>
                 {
                     Object.entries(NEPALI_CALENDAR_DATE).map(item => <>
-                        <option value={item[0]}>
+                        <option value={item[0]} key={item[0]}>
                             {item[0]}
                         </option>
                     </>)
@@ -28,7 +28,7 @@ const CalendarPicker: React.FC = () => {
             }} value={selectedMonth || ''} placeholder={'Select month'} className={'px-4 py-2'}>
                 {
                     Object.entries(NEPALI_MONTHS).map(item => <>
-                        <option value={item[0]}>
+                        <option value={item[0]} key={item[0]}>
                             {item[1].np}
                         </option>
                     </>)

@@ -97,7 +97,7 @@ const CalendarUI: React.FC<{
                                 /**
                                  * IS CURRENT DATE
                                  */
-                                const isCurrentDate =  currentDate ? (currentDate?.date === date?.day)
+                                const isCurrentDate = currentDate ? (currentDate?.date === nepaliDate?.date?.date)
                                     && (currentDate?.year === nepaliDate?.date?.year)
                                     && (currentDate?.month === nepaliDate?.date?.month) : false
 
